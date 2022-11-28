@@ -1,0 +1,75 @@
+.footerInner {
+    width: 95vw;
+    margin: auto;
+    background-color: #272727;
+    padding: 10vh 0;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    color: $white;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2vw;
+}
+
+.footerContent--4 {
+    position: relative;
+    grid-column: span 4;
+    @include responsive('tablet') {
+        grid-column: span 10;
+        margin-bottom: 50px;
+    }
+    * {
+        z-index: 10;
+    }
+}
+
+.footerContent--2 {
+    grid-column: span 2;
+    @include responsive('tablet') {
+        grid-column: span 10;
+        margin-bottom: 50px;
+    }
+    * {
+        z-index: 10;
+    }
+}
+
+
+
+.footerLogo img{
+    max-height: 60px;
+    margin-bottom: 50px;
+
+}
+
+.footerIcon img{
+    width: auto;
+    max-height: 60px;
+    margin-bottom: 50px;
+    @include responsive('tablet') {
+        max-height: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.footerTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footerApp {
+    position: absolute;
+    bottom: -20vh;
+    z-index: 0;
+    @include responsive('tablet') {
+        max-width: 70%;
+        bottom: -30vh;
+        right: 0;
+    }
+}

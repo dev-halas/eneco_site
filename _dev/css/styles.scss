@@ -1,0 +1,29 @@
+@import "./base/reset.scss";
+@import "./base/core.scss";
+
+/* ------ Layouts ------ */
+
+@import "./layout/header.scss";
+
+/* ------ Components ------ */
+
+@import "./components/home/hero.scss";
+@import "./components/home/about.scss";
+@import "./components/home/ourProduct.scss";
+@import "./components/home/contactForm.scss";
+@import "./components/home/news.scss";
+
+/* ------ Offer ------ */
+
+@import "./components/offer/offer.scss";
+
+/* ------ Contact ------ */
+
+@import "./components/contact/contact.scss";
+
+
+@import "./base/animations.scss";
+/* ------ FOOTER -----*/
+
+
+@import "./layout/footer.scss";

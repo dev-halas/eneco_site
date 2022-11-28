@@ -1,0 +1,15 @@
+<?php 
+    get_header();
+?>
+    <main>
+        <?php 
+            get_template_part('/libs/hero-header');
+            get_template_part('/libs/home/about');
+            get_template_part('/libs/home/ourProduct');
+            get_template_part('/libs/home/contactForm');
+            get_template_part('/libs/home/news');
+        ?>
+    </main>
+<?php   
+    get_footer(); 
+?>

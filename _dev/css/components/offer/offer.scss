@@ -1,0 +1,136 @@
+.offer{
+    position: relative;
+    width: 100%;
+}
+
+.offerInner {
+    width: 90vw;
+    margin: auto;
+    border-radius: 2.5vw 2.5vw 0 0;
+    -webkit-border-radius: 2.5vw 2.5vw 0 0;
+    -moz-border-radius: 2.5vw 2.5vw 0 0;
+    -ms-border-radius: 2.5vw 2.5vw 0 0;
+    -o-border-radius: 2.5vw 2.5vw 0 0;
+    background-color: $white;
+    margin-top: -6vh;
+    padding: 10vh 0;
+}
+
+.offer::after {
+    content: '';
+    width: 96vw;
+    height: 15vw;
+    position: absolute;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: -15;
+    left: 2vw;
+    border-radius: 0 0 2.5vw 2.5vw;
+    -webkit-border-radius: 0 0 2.5vw 2.5vw;
+    -moz-border-radius: 0 0 2.5vw 2.5vw;
+    -ms-border-radius: 0 0 2.5vw 2.5vw;
+    -o-border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.offerContainer {
+    width: 80vw;
+    margin: auto;
+}
+
+.offerText {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    margin-top: 40px;
+    margin-bottom: 8vh;
+    @include responsive('small') {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.offerStep{
+    margin-bottom: 50px;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    background-color: $lightGrey;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    
+    .stepHeader{
+        display: flex;
+        align-items: center;
+        padding: 2vw 5vw;
+        background-color: $green;
+        border-radius: 2.5vw;
+        -webkit-border-radius: 2.5vw;
+        -moz-border-radius: 2.5vw;
+        -ms-border-radius: 2.5vw;
+        -o-border-radius: 2.5vw;
+
+        @include responsive('small') {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 5vw;
+        }
+
+        .stepCount {
+            width: 12vw;
+            color: #758B15;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include responsive('small') {
+                order: 0;
+                width: 60%;
+            }
+        }
+
+        .stepTitle {
+            color: $white;
+            width: 100%;
+            font-size: clamp(16px, 1.3vw, 30px);
+            font-weight: 600;
+            @include responsive('small') {
+                flex: 0 0 100%;
+                order: 1;
+            }
+        }
+
+        .stepArrow {
+            justify-self: flex-end;
+            order: 0;
+
+            svg {
+                margin-top: 5px;
+                @include responsive('small') {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .stepContent {
+        display: flex;
+        padding: 5vh 5vw;
+
+        @include responsive('small') {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .stepIcon {
+            width: 12vw;
+            @include responsive('small') {
+                width: 15vw;
+                order: 1;
+                align-self: flex-end;
+            }
+        }
+        .stepText {
+            width: 100%;
+        }
+    }
+}
+

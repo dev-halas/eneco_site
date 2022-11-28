@@ -1,0 +1,152 @@
+.ourProduct {
+    position: relative;
+}
+
+.ourProduct--inner {
+    position: relative;
+    width: 80vw;
+    margin: auto;
+
+    display: flex;
+    padding: 10vh 0;
+
+    background-color: $green;
+    border-radius: 2.5vw 2.5vw 0 0;
+    -webkit-border-radius: 2.5vw 2.5vw 0 0;
+    -moz-border-radius: 2.5vw 2.5vw 0 0;
+    -ms-border-radius: 2.5vw 2.5vw 0 0;
+    -o-border-radius: 2.5vw 2.5vw 0 0;
+
+    @include responsive('tablet'){
+        flex-direction: column;
+    }
+}
+
+.ourProduct--eko {
+    font-size: clamp(100px, 25vw, 600px);
+    color: #F8F8F8;
+    line-height: 1;
+    position: absolute;
+    top: -30%;
+    left: 10vw;
+    text-transform: lowercase;
+    z-index: 1;
+}
+
+.ourProduct--content {
+    position: relative;
+    z-index: 10;
+    background-color: $white;
+    width: min(900px, 55vw);
+    padding: 10vh 5vw 10vh 0;
+    @include responsive('tablet') {
+        width: 80vw;
+        padding: 5vw 0;
+    }
+}
+
+.ourProduct--leftIcon {
+    max-width: 80px;
+    margin-bottom: 50px;
+}
+
+.ourProduct--text {
+    margin-top: 40px;
+}
+
+.ourProduct--icons {
+    z-index: 10;
+    flex: 1 1 auto;
+}
+
+.ourProduct--iconsInner {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    @include responsive('tablet') {
+        margin-top: 20%;
+    }
+}
+
+.ourProduct--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+        max-width: 85px;
+    }
+
+    span {
+        color: $white;
+        margin-top: 30px;
+    }
+}
+
+.ourProduct--rightBackground {
+    position: absolute;
+    width: 55vw;
+    height: auto;
+    right: -8vw;
+    bottom: -10vh;
+    z-index: 5;
+    @include responsive('tablet') {
+        width: 90vw;
+        right: -5vw;
+        z-index: 5;
+        bottom: -5vh;
+    }
+}
+
+.ourProduct--rightBackground::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.23);
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+}
+
+.ourProduct--rightBackground img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+}
+
+.ourProduct--certificate {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $white;
+    bottom: 5%;
+    right: 0;
+    width: 40vw;
+    background-color: $red;
+    padding: 30px 50px;
+    z-index: 10;
+    border-radius: 2.5vw;
+    -webkit-border-radius: 2.5vw;
+    -moz-border-radius: 2.5vw;
+    -ms-border-radius: 2.5vw;
+    -o-border-radius: 2.5vw;
+    @include responsive('tablet') {
+        width: 80vw;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+        gap: 20px;
+        bottom: -10%;
+    }
+}
